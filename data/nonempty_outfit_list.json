@@ -1,0 +1,80 @@
+{"outfitList": [
+    {
+        "top": {
+            "color": "red",
+            "bought": "true",
+            "name": "red shirt",
+            "type": "top"
+        },
+        "pants": {
+            "color": "blue",
+            "bought": "true",
+            "name": "blue pants",
+            "type": "pants"
+        },
+        "hat": {
+            "color": "red",
+            "bought": "true",
+            "name": "red hat",
+            "type": "hat"
+        },
+        "shoes": {
+            "color": "green",
+            "bought": "true",
+            "name": "green shoes",
+            "type": "shoes"
+        }
+    },
+    {
+        "top": {
+            "color": "red",
+            "bought": "true",
+            "name": "red shirt",
+            "type": "top"
+        },
+        "pants": {
+            "color": "blue",
+            "bought": "true",
+            "name": "blue pants",
+            "type": "pants"
+        },
+        "hat": {
+            "color": "blue",
+            "bought": "true",
+            "name": "blue hat",
+            "type": "hat"
+        },
+        "shoes": {
+            "color": "green",
+            "bought": "true",
+            "name": "green shoes",
+            "type": "shoes"
+        }
+    },
+    {
+        "top": {
+            "color": "green",
+            "bought": "true",
+            "name": "green shirt",
+            "type": "top"
+        },
+        "pants": {
+            "color": "blue",
+            "bought": "true",
+            "name": "blue pants",
+            "type": "pants"
+        },
+        "hat": {
+            "color": "blue",
+            "bought": "true",
+            "name": "blue hat",
+            "type": "hat"
+        },
+        "shoes": {
+            "color": "green",
+            "bought": "true",
+            "name": "green shoes",
+            "type": "shoes"
+        }
+    }
+]}

@@ -1,11 +1,11 @@
 package model;
 
+import org.json.JSONArray;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.json.JSONObject;
 
 public class ClothingListTest {
     private ClothingList clothingList1;
@@ -18,10 +18,10 @@ public class ClothingListTest {
 
     @BeforeEach
     public void runBefore() {
-        clothing1 = new Clothing( "1", "red", "hat", 100, 80, false);
-        clothing2 = new Clothing("2", "green", "shirt", 120, 70, true);
-        clothing3 = new Clothing("3", "blue", "pants", 140, 60, false);
-        clothing4 = new Clothing("3", "red", "pants", 140, 60, true);
+        clothing1 = new Clothing( "1", "red", "hat", false);
+        clothing2 = new Clothing("2", "green", "shirt", true);
+        clothing3 = new Clothing("3", "blue", "pants", false);
+        clothing4 = new Clothing("3", "red", "pants", true);
 
         clothingList1 = new ClothingList();
         clothingList2 = new ClothingList();
@@ -65,5 +65,14 @@ public class ClothingListTest {
         assertEquals(clothingList2.getAtIndex(0), clothing1);
         assertEquals(clothingList2.getAtIndex(1), clothing2);
         assertEquals(clothingList2.getAtIndex(2), clothing3);
+    }
+
+    @Test
+    public void clothingListToJsonTest() {
+        JSONObject json = clothingList2.clothingListToJson();
+
+        JSONArray jsonArray = json.getJSONArray("clothingList");
+        assertEquals(((JSONObject) jsonArray.get(0)).get("name"), "1");
+        assertEquals(((JSONObject) jsonArray.get(1)).get("name"), "2");
     }
 }

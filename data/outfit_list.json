@@ -1,0 +1,26 @@
+{"outfitList": [{
+    "top": {
+        "color": "red",
+        "bought": "true",
+        "name": "red shirt",
+        "type": "top"
+    },
+    "pants": {
+        "color": "blue",
+        "bought": "true",
+        "name": "blue pants",
+        "type": "pants"
+    },
+    "hat": {
+        "color": "red",
+        "bought": "true",
+        "name": "red hat",
+        "type": "hat"
+    },
+    "shoes": {
+        "color": "green",
+        "bought": "true",
+        "name": "green shoes",
+        "type": "shoes"
+    }
+}]}

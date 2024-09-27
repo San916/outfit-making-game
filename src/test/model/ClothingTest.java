@@ -1,5 +1,6 @@
 package model;
 
+import org.json.JSONObject;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -11,9 +12,9 @@ public class ClothingTest {
 
     @BeforeEach
     public void runBefore() {
-        clothing1 = new Clothing( "1", "red", "hat", 100, 80, false);
-        clothing2 = new Clothing("2", "green", "shirt", 120, 70, true);
-        clothing3 = new Clothing("3", "blue", "pants", 140, 60, false);
+        clothing1 = new Clothing( "1", "red", "hat", false);
+        clothing2 = new Clothing("2", "green", "shirt", true);
+        clothing3 = new Clothing("3", "blue", "pants", false);
 
     }
 
@@ -39,20 +40,6 @@ public class ClothingTest {
     }
 
     @Test
-    public void getBuyPriceTest() {
-        assertEquals(clothing1.getBuyPrice(), 100);
-        assertEquals(clothing2.getBuyPrice(), 120);
-        assertEquals(clothing3.getBuyPrice(), 140);
-    }
-
-    @Test
-    public void getSellPriceTest() {
-        assertEquals(clothing1.getSellPrice(), 80);
-        assertEquals(clothing2.getSellPrice(), 70);
-        assertEquals(clothing3.getSellPrice(), 60);
-    }
-
-    @Test
     public void isBoughtTest() {
         assertFalse(clothing1.isBought());
         assertTrue(clothing2.isBought());
@@ -71,5 +58,19 @@ public class ClothingTest {
         assertTrue(clothing2.isBought());
         clothing2.sell();
         assertFalse(clothing2.isBought());
+    }
+
+    @Test
+    public void boolToStringTest() {
+        assertEquals(clothing1.boolToString(true), "true");
+        assertEquals(clothing1.boolToString(false), "false");
+    }
+
+    @Test
+    public void clothingToJsonTest() {
+        assertEquals(clothing1.clothingToJson().getString("name"), "1");
+        assertEquals(clothing1.clothingToJson().getString("color"), "red");
+        assertEquals(clothing1.clothingToJson().getString("type"), "hat");
+        assertEquals(clothing1.clothingToJson().getString("bought"), "false");
     }
 }

@@ -1,0 +1,23 @@
+{
+    "currentClosetFilter": "hat",
+    "clothingList": [
+        {
+            "color": "red",
+            "bought": "true",
+            "name": "red hat",
+            "type": "hat"
+        },
+        {
+            "color": "blue",
+            "bought": "true",
+            "name": "blue hat",
+            "type": "hat"
+        },
+        {
+            "color": "red",
+            "bought": "true",
+            "name": "red shirt",
+            "type": "top"
+        }
+    ]
+}
